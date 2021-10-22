@@ -13,8 +13,7 @@ function init() {
   var synth = window.speechSynthesis;
   var voices = [];
   var names = [];
-
-  //synth.addEventListener("voiceschanged", populateVoiceList);
+  
   synth.onvoiceschanged = populateVoiceList();
   synth.onvoiceschanged = populateVoiceList;
 
