@@ -14,8 +14,20 @@ function init() {
   var voices = [];
   var names = [];
 
-  synth.addEventListener("voiceschanged", populateVoiceList);
+  //synth.addEventListener("voiceschanged", populateVoiceList);
+  synth.onvoiceschanged = populateVoiceList();
   synth.onvoiceschanged = populateVoiceList;
+
+  // var tryLoadVoices = setInterval(
+  //   (lambda) => {
+  //     populateVoiceList();
+  //     if(voices.length != 0){
+  //       clearInterval(tryLoadVoices);
+  //     }
+  //     console.log("test");
+  //   },
+  //   250
+  // );
 
   function populateVoiceList(){
     voices = synth.getVoices();
@@ -59,21 +71,24 @@ function init() {
           break;
         }
       }
-      smiley.src = "assets/images/smiling-open.png";
-      smiley.alt = "Smiling open face";
+      setTimeout((lambda)=> {
+        utterThis.onstart = openSmiley;
+        utterThis.onend = closeSmiley;
+        synth.speak(utterThis)
 
-      synth.speak(utterThis);
+      }, 50);
+
+      function openSmiley(){
+        smiley.src = "assets/images/smiling-open.png";
+        smiley.alt = "Smiling open face";
+        console.log("start");
+      }
+      function closeSmiley(){
+        smiley.src = "assets/images/smiling.png";
+        smiley.alt = "Smiling face";
+        console.log("end");
+      }
       
-      var speakCheck = setInterval(
-        (lambda) => {
-          if(!synth.speaking){
-            smiley.src = "assets/images/smiling.png";
-            smiley.alt = "Smiling face";
-            clearInterval(speakCheck);
-          }
-        },
-        250
-      );
     }
   );
 
