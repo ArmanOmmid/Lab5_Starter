@@ -15,6 +15,7 @@ function init() {
   var names = [];
 
   synth.addEventListener("voiceschanged", populateVoiceList);
+  synth.onvoiceschanged = populateVoiceList;
 
   function populateVoiceList(){
     voices = synth.getVoices();
