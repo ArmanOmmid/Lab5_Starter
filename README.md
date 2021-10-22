@@ -8,4 +8,4 @@ Expose Link:
 https://armanommid.github.io/Lab5_Starter/expose.html
 
 Explore Link: 
-https://armanommid.github.io/Lab5_Starter/explore.hmtl
+https://armanommid.github.io/Lab5_Starter/explore.html
