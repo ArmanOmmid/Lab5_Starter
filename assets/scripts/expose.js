@@ -17,19 +17,19 @@ function init() {
     (event) => {
       let condition = event.target.value;
       if(condition == "air-horn"){
-        header.textContent = "Expose - Air Horn";
+        //header.textContent = "Expose - Air Horn";
         image.src = "assets/images/air-horn.svg";
         image.alt = "Air Horn"
         audioControl.src = "assets/audio/air-horn.mp3";
       }
       else if(condition == "car-horn"){
-        header.textContent = "Expose - Car Horn";
+        //header.textContent = "Expose - Car Horn";
         image.src = "assets/images/car-horn.svg";
         image.alt = "Car Horn"
         audioControl.src = "assets/audio/car-horn.mp3";
       }
       else if(condition == "party-horn"){
-        header.textContent = "Expose - Party Horn";
+        //header.textContent = "Expose - Party Horn";
         image.src = "assets/images/party-horn.svg";
         image.alt = "Party Horn";
         audioControl.src = "assets/audio/party-horn.mp3";
