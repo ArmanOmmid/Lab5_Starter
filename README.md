@@ -5,7 +5,7 @@ GitHub Actions Link:
 https://github.com/ArmanOmmid/github-actions-for-ci/issues/7
 
 Expose Link: 
-https://armanommid.github.io/Lab5_Starter/explore.html
+https://armanommid.github.io/Lab5_Starter/expose.html
 
 Explore Link: 
 https://armanommid.github.io/Lab5_Starter/explore.html
