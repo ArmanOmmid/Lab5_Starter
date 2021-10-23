@@ -65,10 +65,12 @@ function init() {
 
   playButton.addEventListener("click",
     (event) => {
-      if(hornSelect.value == "party-horn"){
-        jsConfetti.addConfetti();
+      if(audioControl.volume != 0){
+        if(hornSelect.value == "party-horn"){
+          jsConfetti.addConfetti();
+        }
+        audioControl.play();
       }
-      audioControl.play();
     }
   );
 
